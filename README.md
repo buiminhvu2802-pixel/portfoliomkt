@@ -1,6 +1,4 @@
-# 🚀 My Portfolio Website
-
-Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through jaw-dropping 3D animations, slick interactions, and fluid motion. If you're into creative web design, you're in the right place.
+Welcome to my portfolio! I’m Minh Vu, a digital marketer passionate about creative design and impactful campaigns
 
 ![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
 
