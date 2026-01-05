@@ -18,6 +18,7 @@ import {
   SiMicrosoftexcel,
   SiMicrosoftword,
   SiMicrosoftpowerpoint,
+  SiGoogleforms,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
@@ -125,6 +126,12 @@ const PROJECT_SKILLS = {
     bg: "#D24726",
     fg: "white",
     icon: <SiMicrosoftpowerpoint />,
+  },
+  googleForms: {
+    title: "Google Forms",
+    bg: "#7248B9",
+    fg: "white",
+    icon: <SiGoogleforms />,
   },
 };
 export type Project = {
@@ -290,7 +297,7 @@ const projects: Project[] = [
   },
   {
     id: "dermaluxsite",
-    category: "Dermalux Website",
+    category: "Website",
     title: "Dermalux Website",
     src: "/assets/projects-screenshots/dermaluxsite/landing.png",
     screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
@@ -299,6 +306,7 @@ const projects: Project[] = [
       frontend: [
         PROJECT_SKILLS.excel,
         PROJECT_SKILLS.word,
+        PROJECT_SKILLS.googleAnalytics,
       ],
       backend: [
         PROJECT_SKILLS.chatgpt,
@@ -371,7 +379,7 @@ const projects: Project[] = [
   },
   {
     id: "dermaluxbehance",
-    category: "Dermalux Behance",
+    category: "Behance",
     title: "Dermalux Behance",
     src: "/assets/projects-screenshots/dermaluxbehance/landing.png",
     screenshots: ["1.png"],
@@ -433,17 +441,155 @@ const projects: Project[] = [
     },
   },
   {
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/portfolio/landing.png",
+    id: "data",
+    category: "Data",
+    title: "My Data Analytic",
+    src: "/assets/projects-screenshots/data/landing.png",
     screenshots: ["1.png"],
-    live: "http://nareshkhatri.vercel.app",
+    live: "https://buiminhvu2802-pixel.github.io/dgmkt/",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.illustrator,
+        PROJECT_SKILLS.excel,
+      ],
+      backend: [
+        PROJECT_SKILLS.powerBi,
+        PROJECT_SKILLS.gemini,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Where raw numbers transform into stories, and dashboards become art.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">
+            Visit Dashboard{" "}
+          </TypographyH3>
+          <p className="font-mono mb-2">
+            Interactive Power BI Visuals
+            Ever seen Excel sheets glow up? Yeah, I did that. I took plain spreadsheets and turned them into living dashboards that pulse with insights 🤯.
+            Every chart, every filter, every drill-down is powered by AI-assisted code — making data not just useful, but beautiful.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/data/dashboard1.png`,
+              `${BASE_PATH}/data/dashboard2.png`,
+              `${BASE_PATH}/data/dashboard3.png`,
+              `${BASE_PATH}/data/dashboard4.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 ">Data Universe</TypographyH3>
+          <p className="font-mono mb-2">
+            Bright visuals + smooth interactivity = a galaxy of clarity.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/data/ex1.png`,
+              `${BASE_PATH}/data/ex2.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
+
+          <p className="font-mono mb-2">
+            From business KPIs to marketing analytics, I craft dashboards that cut through the noise — no filler, all killer.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/data/pr1.png`,
+              `${BASE_PATH}/data/pr2.png`,
+              `${BASE_PATH}/data/pr3.png`,
+            ]}
+          />
+          <p className="font-mono mb-2 mt-8 text-center">
+            This isn’t just reporting — it’s a vibe. Numbers finally have a stage, and they’re performing. 🎭
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "emailmarketing",
+    category: "Email",
+    title: "Form and Email",
+    src: "/assets/projects-screenshots/emailmarketing/1.png",
+    screenshots: ["1.png", "2.png", "3.png", "4.png"],
+    live: "https://drive.google.com/drive/folders/119y-Fm7vzjn6ddRhAij4BQ3ZDVRqaDqe?usp=sharing",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.word,
+        PROJECT_SKILLS.excel,
+        PROJECT_SKILLS.googleForms,
+      ],
+      backend: [
+        PROJECT_SKILLS.chatgpt,
+        PROJECT_SKILLS.gemini
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Every project starts with a question. Mine was simple: How can I collect feedback and make it flow seamlessly into action?
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">
+            The Idea{" "}
+          </TypographyH3>
+          <p className="font-mono mb-2">
+            I designed a Google Form to capture responses — clean, intuitive, and easy for users to fill out. But I didn’t want the data to just sit there. I wanted it to talk back, to trigger actions.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/emailmarketing/1.png`,
+              `${BASE_PATH}/emailmarketing/2.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">The Build</TypographyH3>
+
+          <p className="font-mono mb-2">
+            Google Form: Structured questions, clear design, and logic that guides users smoothly.
+            Apps Script: I wrote custom scripts to connect the form with Gmail. Each submission automatically sends a personalized email — confirmation for the user, notification for me.
+            Automation Flow: No manual copy-paste, no delays. Just instant communication powered by code.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/emailmarketing/3.png`,
+              `${BASE_PATH}/emailmarketing/4.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">The Experience</TypographyH3>
+
+          <p className="font-mono mb-2">
+            For respondents, it feels effortless: submit a form, get an email. For me, it’s a dashboard of responses and a streamlined workflow.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/emailmarketing/5.png`,
+              `${BASE_PATH}/emailmarketing/6.png`,
+              `${BASE_PATH}/emailmarketing/7.png`,
+              `${BASE_PATH}/emailmarketing/8.png`,
+            ]}
+          />
+          <p className="font-mono mb-2 mt-8 text-center">
+            This isn’t just a survey — it’s a system. A blend of design and automation that saves time, builds trust, and makes feedback actionable.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "design",
+    category: "Design",
+    title: "Design",
+    src: "/assets/projects-screenshots/design/1.png",
+    screenshots: ["1.png"],
+    live: "https://drive.google.com/drive/folders/1a_z1JpQMOZGRSvsniIR3-MA7VTi6WKwK?usp=sharing",
     skills: {
       frontend: [
         PROJECT_SKILLS.photoshop,
         PROJECT_SKILLS.illustrator,
-        PROJECT_SKILLS.premiere,
       ],
       backend: [],
     },
@@ -451,178 +597,49 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
+            Every story begins with curiosity. For me, it was the question: How can I turn ideas into visuals?
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
+            The Beginning{" "}
           </TypographyH3>
           <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
+            I started with the basics — exploring tools, following tutorials, and experimenting with every detail. No formal classes, just patience and a passion for discovery.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/portfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
+              `${BASE_PATH}/design/2.png`,
+              `${BASE_PATH}/design/3.png`,
+              `${BASE_PATH}/design/4.png`,
             ]}
           />
-          <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
-          <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/portfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">The Process</TypographyH3>
 
           <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
+            Self-learning online: Videos, blogs, and free resources.
+            Constant experimentation: Each small design became a practice, a step forward.
+            Trial and error: Every revision was a new lesson
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/portfolio/projects.png`,
-              `${BASE_PATH}/portfolio/project.png`,
+              `${BASE_PATH}/design/5.png`,
+              `${BASE_PATH}/design/6.png`,
+              `${BASE_PATH}/design/7.png`,
+              `${BASE_PATH}/design/8.png`,
+              `${BASE_PATH}/design/9.png`,
+              `${BASE_PATH}/design/10.png`,
+              `${BASE_PATH}/design/11.png`,
+              `${BASE_PATH}/design/12.png`,
             ]}
           />
+          <TypographyH3 className="my-4 mt-8">The Small Designs</TypographyH3>
+
+          <p className="font-mono mb-2">
+            These aren’t grand masterpieces, but creative fragments: simple posters, experimental logos, basic layouts. Each piece is proof of progress, a milestone in my learning journey.
+          </p>
           <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
+            I realized design is more than a skill — it’s storytelling through visuals. These small projects are the first chapters of a longer journey, where I learn, create, make mistakes, and grow.
           </p>
-        </div>
-      );
-    },
-  },
-  {
-    id: "ghostchat",
-    category: "Anonymous chat",
-    title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
-    live: "https://ghostchat.vercel.app",
-    skills: {
-      frontend: [PROJECT_SKILLS.metaAds],
-      backend: [PROJECT_SKILLS.chatgpt],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Ghostchat is your go-to spot for sending anonymous messages without
-            leaving a trace. Powered by Supabase, it&apos;s all about keeping things
-            low-key and secure. Whether you&apos;re sharing secrets, giving feedback,
-            or just having some fun, Ghostchat ensures your identity stays
-            hidden, while your voice is heard. Say what you want, without the
-            worry.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/ghostchat/1.png`,
-              `${BASE_PATH}/ghostchat/2.png`,
-              `${BASE_PATH}/ghostchat/3.png`,
-              `${BASE_PATH}/ghostchat/4.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  {
-    id: "jra",
-    category: "Result analyzer",
-    title: "JNTUA Results Analyzer",
-    src: "/assets/projects-screenshots/jra/1.png",
-    screenshots: ["1.png"],
-    live: "https://naresh-khatri.github.io/JNTUA-result-analyser-spa/#/",
-    skills: {
-      frontend: [PROJECT_SKILLS.googleAnalytics],
-      backend: [
-        PROJECT_SKILLS.powerBi,
-        PROJECT_SKILLS.excel,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            JNTUA Results Analyzer was a revolutionary tool designed to simplify
-            and enhance the experience of accessing academic results. It served
-            as a powerful proxy between the JNTUA university results website and
-            its users, offering a range of features that made result analysis
-            faster and more efficient. Here&apos;s what made it stand out:
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/jra/1.png`]} />
-          <TypographyH3 className="my-4 mt-8">
-            Effortless Results Retrieval
-          </TypographyH3>
-          {/* Effortless Results Retrieval: */}
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Search all your results using a single roll number, eliminating
-              the tedious task of sifting through thousands of rows on the
-              official site.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Class-Wise Results:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              class-wise results effortlessly by entering a roll number range.
-              No more manual searches or filtering.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Faculty Features:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Faculty members could download batch results in Excel format,
-              making administrative tasks a breeze.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">
-            Enhanced Data Insights:
-          </TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Each result came with additional features including:
-              <ul className="list-disc font-mono ml-6">
-                <li>
-                  <strong>CGPA Calculations: </strong>Easily track your
-                  cumulative grade point average.
-                </li>
-                <li>
-                  <strong>Charts:</strong> Visualize your academic performance
-                  with comprehensive charts.
-                </li>
-                <li>
-                  <strong>Future Projections:</strong> Get insights into
-                  potential future outcomes based on current performance.
-                </li>
-                <li>
-                  <strong> Backlog Counts: </strong>Keep track of your backlog
-                  subjects at a glance.
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Performance:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              The application was significantly faster and more efficient than
-              the official site, providing a smoother user experience.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Downfall:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Unfortunately, as of May 2022, the tool stopped working due to the
-              introduction of CAPTCHA on the official JNTUA results site, which
-              disrupted the seamless functionality of the app. JNTUA Results
-              Analyzer transformed the way students and faculty interacted with
-              academic results, making it a must-have tool until its unexpected
-              shutdown.
-            </li>
-          </ul>
         </div>
       );
     },

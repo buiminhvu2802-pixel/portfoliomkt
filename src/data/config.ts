@@ -20,17 +20,17 @@ const config = {
   ],
   author: "Minh Vu",
   email: "buiminhvu2802@gmail.com",
-  site: "https://nareshkhatri.site",
+  site: "https://portfoliomkt.vercel.app/",
 
   // for github stars button
-  githubUsername: "buiminhvu2802-pixel",
-  githubRepo: "portfoliomkt",
+  githubUsername: "Minh Vu",
+  githubRepo: "portfolio",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/akagamir68470?s=21",
+    zalo: "https://zalo.me/0942554031",
     linkedin: "https://www.linkedin.com/in/v%C5%A9-b%C3%B9i-minh-9b055a229/",
     instagram: "https://www.instagram.com/_minnduzz_/",
     facebook: "https://www.facebook.com/minh.vu.815500/",
