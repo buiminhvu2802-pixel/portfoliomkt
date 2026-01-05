@@ -35,7 +35,7 @@ const config = {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
+    zalo: "https://zalo.me/",
     linkedin: "https://www.linkedin.com/in/naresh-khatri/",
     instagram: "https://www.instagram.com/hotchaddi",
     facebook: "https://www.facebook.com/HotChaddi/",
