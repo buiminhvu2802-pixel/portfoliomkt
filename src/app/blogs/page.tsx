@@ -26,7 +26,7 @@ export default function BlogPage() {
           Space Log
         </h1>
         <p className="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
-          Documenting my journey through the cosmos of code.
+          Documenting my journey through the cosmos of marketing.
         </p>
       </RevealAnimation>
 
