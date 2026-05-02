@@ -19,6 +19,8 @@ import {
   SiMicrosoftword,
   SiMicrosoftpowerpoint,
   SiGoogleforms,
+  SiPython,
+  SiMysql,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
@@ -132,6 +134,18 @@ const PROJECT_SKILLS = {
     bg: "#7248B9",
     fg: "white",
     icon: <SiGoogleforms />,
+  },
+  python: {
+    title: "Python",
+    bg: "#3776AB",
+    fg: "white",
+    icon: <SiPython />,
+  },
+  sql: {
+    title: "SQL",
+    bg: "#4479A1",
+    fg: "white",
+    icon: <SiMysql />,
   },
 };
 export type Project = {
@@ -443,7 +457,7 @@ const projects: Project[] = [
   {
     id: "data",
     category: "Data",
-    title: "My Data Analytic",
+    title: "My Dermalux Data Analytic",
     src: "/assets/projects-screenshots/data/landing.png",
     screenshots: ["1.png"],
     live: "https://buiminhvu2802-pixel.github.io/dgmkt/",
@@ -639,6 +653,213 @@ const projects: Project[] = [
           </p>
           <p className="font-mono mb-2 mt-8 text-center">
             I realized design is more than a skill — it’s storytelling through visuals. These small projects are the first chapters of a longer journey, where I learn, create, make mistakes, and grow.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "cameolenhdenh",
+    category: "Fanpage",
+    title: "Cá Mèo Lênh Đênh",
+    src: "/assets/projects-screenshots/cameolenhdenh/1.png",
+    screenshots: ["1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.illustrator,
+        PROJECT_SKILLS.photoshop,
+        PROJECT_SKILLS.word,
+      ],
+      backend: [
+        PROJECT_SKILLS.chatgpt,
+        PROJECT_SKILLS.gemini,
+      ],
+    },
+    live: "https://www.facebook.com/profile.php?id=61586927107063",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Cá Mèo Lênh Đênh
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            Official fanpage for Cá Mèo Lênh Đênh — proudly serving handcrafted Greek yogurt in Saigon.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Daily contents</TypographyH3>
+          <p className="font-mono mb-2">
+            At Cá Mèo Lênh Đênh, every handcrafted Greek yogurt story is filmed by us — capturing bold pairings and creative twists under our motto: You dare to challenge, we dare to create.
+          </p>
+          <SlideShow
+            images={[
+              {
+                src: `${BASE_PATH}/cameolenhdenh/daily1.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/daily1.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/daily2.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/daily2.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/daily3.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/daily3.png`,
+              },
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Image</TypographyH3>
+          <p className="font-mono mb-2">
+            At Cá Mèo Lênh Đênh, every image and video is handcrafted by us — reflecting premium market insights while showcasing bold Greek yogurt pairings under our motto: You dare to challenge, we dare to create.
+          </p>
+          <SlideShow
+            images={[
+              {
+                src: `${BASE_PATH}/cameolenhdenh/3ac.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/3ac.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/4ac.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/4ac.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/5ac.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/5ac.png`,
+              },
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Proposal</TypographyH3>
+
+          <p className="font-mono mb-2">
+            Through market research into premium trends, consumer tastes, and color psychology, we decided to create Cá Mèo Lênh Đênh — a handcrafted Greek yogurt brand that embodies authenticity, creativity, and bold flavor experiences.
+          </p>
+          <SlideShow
+            images={[
+              {
+                src: `${BASE_PATH}/cameolenhdenh/1.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/1.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/2.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/2.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/3.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/3.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/4.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/4.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/5.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/5.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/6.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/6.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/7.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/7.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/8.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/8.png`,
+              },
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Design</TypographyH3>
+          <p className="font-mono mb-2">
+            The design of Cá Mèo Lênh Đênh carries a distinctive character, shaped by premium market research and consumer insights. With carefully chosen colors and handcrafted visuals, it balances elegance and accessibility, creating a brand identity that feels authentic, creative, and unmistakably unique.
+          </p>
+          <SlideShow
+            images={[
+              {
+                src: `${BASE_PATH}/cameolenhdenh/logo xanh.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/logo xanh.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/menu.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/menu.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/Sticker.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/Sticker.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/anhbia.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/anhbia.png`,
+              },
+              {
+                src: `${BASE_PATH}/cameolenhdenh/fb.png`,
+                zoomSrc: `${BASE_PATH}/cameolenhdenh/fb.png`,
+              },
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "customershoppingbehavior",
+    category: "Data",
+    title: "Customer Shopping Behavior",
+    src: "/assets/projects-screenshots/customershoppingbehavior/pbi.png",
+    screenshots: ["pbi.png"],
+    live: "https://github.com/buiminhvu2802-pixel/customer_behavior_analysis",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.sql,
+      ],
+      backend: [
+        PROJECT_SKILLS.powerBi,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            How can companies leverage consumer purchasing data to identify trends, improve customer engagement, and optimize marketing and product strategies?"
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">
+            Clean Data with python{" "}
+          </TypographyH3>
+          <p className="font-mono mb-2">
+            In this project, I performed a complete data preparation workflow for the Customer Shopping Behavior dataset. The process included loading and exploring the data, handling missing values by replacing them with category-wise medians, standardizing column names, creating new variables such as age groups and purchase frequency, and removing redundant columns. Finally, I imported the cleaned dataset into a PostgreSQL database using SQLAlchemy for further analysis and visualization.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/customershoppingbehavior/py1.png`,
+              `${BASE_PATH}/customershoppingbehavior/py2.png`,
+              `${BASE_PATH}/customershoppingbehavior/py3.png`,
+              `${BASE_PATH}/customershoppingbehavior/py4.png`,
+              `${BASE_PATH}/customershoppingbehavior/py5.png`,
+              `${BASE_PATH}/customershoppingbehavior/py6.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 ">Answer questions with SQL</TypographyH3>
+          <p className="font-mono mb-2">
+            I performed SQL analysis on customer shopping behavior data to uncover key insights such as revenue by gender, top-rated and best-selling products, spending patterns by shipping type and subscription status, discount usage rates, customer segmentation, and revenue contribution by age group.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/customershoppingbehavior/sql1.png`,
+              `${BASE_PATH}/customershoppingbehavior/sql2.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Power BI</TypographyH3>
+
+          <p className="font-mono mb-2">
+            I visualized the cleaned customer shopping behavior dataset in Power BI through interactive dashboards, showcasing insights such as revenue by gender and age group, top products, discount usage, and customer segmentation.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/customershoppingbehavior/pbi1.png`,
+            ]}
+          />
+          <p className="font-mono mb-2 mt-8 text-center">
+            This isn’t just data cleaning — it’s storytelling. From Python scripts shaping raw records, to SQL queries uncovering hidden patterns, and finally Power BI dashboards bringing insights to life. The numbers don’t just sit in tables anymore — they speak, they connect, they perform. 🎭
           </p>
         </div>
       );
